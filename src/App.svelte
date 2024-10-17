@@ -26,10 +26,12 @@
         Shuffle the Schau ist ein Kunstprojekt nach einer Idee von <a
             href="https://cultur.social/@marcuwekling/113317290193122152"
             >Marc-Uwe Kling und dem Känguru</a
-        > umgesetzt von einem bekloppten Studenten und steht in keiner Beziehung
-        mit der Tagesschau oder der ARD. Die Daten kommen von der öffentlichen API
-        https://tagesschau.api.bund.dev/ und werden live im Browser verarbeitet,
-        es findet also keine Neuveröffentlichung statt.
+        >, umgesetzt von einem bekloppten Studenten und steht in keiner
+        Beziehung mit der Tagesschau oder der ARD. Die Daten kommen von der
+        öffentlichen API https://tagesschau.api.bund.dev/ und werden live im
+        Browser verarbeitet, es findet also keine Neuveröffentlichung statt.
+        Manche Ergebnisse können ohne Kontext makaber oder unpassend sein, das
+        ist leider nicht zu vermeiden, da alles zufällig generiert wird.
     </p>
 </footer>
 
