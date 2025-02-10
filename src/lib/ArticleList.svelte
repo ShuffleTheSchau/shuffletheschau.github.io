@@ -60,25 +60,27 @@
 {:then items}
     <div class="article-list">
         {#each items.news as item, i}
-            <div class="article">
-                <div class="article-image">
-                    <img src={images[i].image} alt={images[i].alt_text} />
+            {#if item.content}
+                <div class="article">
+                    <div class="article-image">
+                        <img src={images[i].image} alt={images[i].alt_text} />
+                    </div>
+
+                    <a href={item.detailsweb}>
+                        <main>
+                            <h2 class="topline">{item.topline}</h2>
+                            <h1 class="title">{item.title}</h1>
+
+                            <div class="article-except">
+                                {@html sanitizeHtml(item.content[0]?.value, {
+                                    allowedTags: ["b", "i", "em", "strong"],
+                                })}
+                                <span class="link-extend"> mehr </span>
+                            </div>
+                        </main>
+                    </a>
                 </div>
-
-                <a href={item.detailsweb}>
-                    <main>
-                        <h2 class="topline">{item.topline}</h2>
-                        <h1 class="title">{item.title}</h1>
-
-                        <div class="article-except">
-                            {@html sanitizeHtml(item.content[0]?.value, {
-                                allowedTags: ["b", "i", "em", "strong"],
-                            })}
-                            <span class="link-extend"> mehr </span>
-                        </div>
-                    </main>
-                </a>
-            </div>
+            {/if}
         {/each}
     </div>
 {:catch error}
